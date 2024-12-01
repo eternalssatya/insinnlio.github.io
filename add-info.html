@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tambah Informasi</title>
+    <script>
+        // Memeriksa URL saat halaman dimuat
+        window.onload = function() {
+            const currentPath = window.location.pathname;
+            if (currentPath !== '/apalu') {
+                // Jika URL tidak sesuai, alihkan ke index.html
+                window.location.href = 'index.html';
+            }
+        };
+
+        function previewImage(event) {
+            const imagePreview = document.getElementById('image-preview');
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function() {
+                imagePreview.src = reader.result;
+                imagePreview.style.display = 'block'; // Tampilkan gambar
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.src = '';
+                imagePreview.style.display = 'none'; // Sembunyikan gambar jika tidak ada
+            }
+        }
+
+        function saveInfo(event) {
+            event.preventDefault(); // Mencegah form dari pengiriman default
+
+            const info = document.getElementById('info').value;
+            const image = document.getElementById('image-preview').src;
+
+            // Simpan informasi dan gambar ke localStorage
+            const data = { info, image };
+            localStorage.setItem('uploadedInfo', JSON.stringify(data));
+
+            // Redirect ke index.html setelah menyimpan
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Tambah Informasi</h1>
+    </header>
+    <main>
+        <form id="info-form" onsubmit="saveInfo(event)">
+            <label for="info">Informasi:</label>
+            <textarea id="info" required></textarea>
+
+            <label for="image-upload">Unggah Foto:</label>
+            <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event)">
+            <img id="image-preview" src="" alt="Preview Gambar" style="display:none; max-width: 200px; margin-top: 10px;">
+
+            <button type="submit">Simpan Informasi</button>
+        </form>
+    </main>
+</body>
+<footer></footer>
+</html>
