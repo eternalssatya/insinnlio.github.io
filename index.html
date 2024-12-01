@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ETERNALS</title>
+    <script>
+        window.onload = function() {
+            const data = JSON.parse(localStorage.getItem('uploadedInfo'));
+            const infoContainer = document.getElementById('info-container');
 
+            if (data) {
+                const infoDiv = document.createElement('div');
+                infoDiv.innerHTML = `
+                    <h3>Informasi:</h3>
+                    <p>${data.info}</p>
+                    <img src="${data.image}" alt="Gambar yang diunggah" style="max-width: 200px;">
+                `;
+                infoContainer.appendChild(infoDiv);
+            }
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>INPO</h1>
+    </header>
+    <main>
+        <h2>INFORMASI</h2>
+        <div id="info-container"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+<footer></footer>
+</html>
