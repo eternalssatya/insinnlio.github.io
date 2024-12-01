@@ -1,0 +1,147 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282a36; /* Warna latar belakang gelap */
+    color: #f8f8f2; /* Warna teks utama */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #44475a; /* Warna header */
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #bd93f9; /* Warna biru keunguan */
+    text-shadow: 0 0 10px rgba(189, 147, 249, 0.8); /* Efek cahaya */
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    background-color: #44475a; /* Warna latar belakang form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #f8f8f2; /* Warna label */
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #bd93f9; /* Warna border textarea */
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #6272a4; /* Warna latar belakang textarea */
+    color: #f8f8f2; /* Warna teks textarea */
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #bd93f9; /* Warna tombol */
+    color: #282a36; /* Warna teks tombol */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff79c6; /* Warna tombol saat hover */
+}
+
+img {
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Lisensi Satyadepe */
+footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #f8f8f2;
+    text-align: center; /* Pusatkan teks */
+    overflow: hidden; /* Sembunyikan bagian yang melampaui */
+    position: relative; /* Untuk posisi absolut anak */
+}
+
+/* Efek Glitch */
+footer::before {
+    content: "Lisensi: Satyadepe";
+    display: block;
+    margin-top: 20px;
+    position: relative;
+    color: #f8f8f2; /* Warna teks utama */
+    animation: glitch 1s infinite; /* Animasi glitch */
+}
+
+/* Animasi Glitch */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8), -1px -1px 0 rgba(0, 255, 0, 0.8);
+    }
+    20% {
+        transform: translate(-2px, -2px);
+        text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8), -1px -1px 0 rgba(0, 255, 0, 0.8);
+    }
+    40% {
+        transform: translate(2px, 2px);
+        text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8), -1px -1px 0 rgba(0, 255, 0, 0.8);
+    }
+    60% {
+        transform: translate(-2px, 2px);
+        text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8), -1px -1px 0 rgba(0, 255, 0, 0.8);
+    }
+    80% {
+        transform: translate(2px, -2px);
+        text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8), -1px -1px 0 rgba(0, 255, 0, 0.8);
+    }
+    100% {
+        transform: translate(0);
+        text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.8), -1px -1px 0 rgba(0, 255, 0, 0.8);
+    }
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Pastikan body setinggi viewport */
+}
+
+main {
+    flex: 1; /* Membuat main mengambil ruang yang tersisa */
+      }
