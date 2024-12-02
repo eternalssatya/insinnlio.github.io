@@ -1,0 +1,4 @@
+git add path/to/image.jpg
+git commit -m "Add image"
+git push origin main  # atau branch yang Anda gunakan
+
