@@ -1,36 +1,90 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>ETERNALS</title>
-    <script>
-        window.onload = function() {
-            const data = JSON.parse(localStorage.getItem('uploadedInfo'));
-            const infoContainer = document.getElementById('info-container');
-
-            if (data) {
-                const infoDiv = document.createElement('div');
-                infoDiv.innerHTML = `
-                    <h3>Informasi:</h3>
-                    <p>${data.info}</p>
-                    <img src="${data.image}" alt="Gambar yang diunggah" style="max-width: 200px;">
-                `;
-                infoContainer.appendChild(infoDiv);
-            }
-        };
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eternals Satya's</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>INPO</h1>
-    </header>
-    <main>
-        <h2>INFORMASI</h2>
-        <div id="info-container"></div>
-    </main>
-    <script src="script.js"></script>
+  
+  <link rel="icon" href="profile.jpg" type="image/png">
+
+  
+<!-- Hero Section -->
+<header class="hero">
+  <div class="profile-container">
+    <div class="neon-ring"></div> <!-- Lingkaran Neon -->
+    <img src="profile.jpg" alt="Eternals Satya" class="profile-img"> <!-- Gambar Profil -->
+  </div>
+  <h1>Hi, It's <span class="highlight">Eternals Satya</span></h1>
+  <p class="subtitle">I'm a <span class="highlight">Creator App</span> creating innovative digital experiences</p>
+  <a href="#services" class="cta">Explore More</a>
+</header>
+
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>My <span class="highlight">Services</span></h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>UI Design</h3>
+        <p>Modern and user-friendly designs for apps and websites.</p>
+      </div>
+      <div class="card">
+        <h3>Frontend Development</h3>
+        <p>Responsive and fast websites with a clean code structure.</p>
+      </div>
+      <div class="card">
+        <h3>Backend Development</hh>
+        <p>Robust server-side applications and APIs.</p>
+      </div>
+      <div class="card">
+        <h3>Testing</h3>
+        <p>Ensuring flawless user experiences with detailed testing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What <span class="highlight">Clients Say</span></h2>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"Eternals Satya exceeded our expectations! Truly talented."</p>
+        <span>- Ismail's</span>
+      </div>
+      <div class="testimonial">
+        <p>"Amazing apps! Highly recommended for digital projects."</p>
+        <span>- Ilham's</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education">
+    <h2>My <span class="highlight">Education</span></h2>
+    <div class="timeline">
+      <div class="event">
+        <span class="year">2022</span> <!-- Tahun 2022 untuk MTs -->
+        <div class="details">
+          <h3>Middle School (MTs)</h3> <!-- Sekolah Menengah Pertama -->
+          <p>Currently studying at a local MTs, focusing on a well-rounded education with an interest in technology and design.</p>
+        </div>
+      </div>
+      <div class="event">
+        <span class="year">2021</span> <!-- Tahun sebelumnya untuk entri kedua -->
+        <div class="details">
+          <h3>Freelance App Creator</h3>
+          <p>Started working on freelance projects, creating applications for clients and learning new skills in app development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Eternals Satya's Portfolio. Designed with <span class="highlight">passion</span>.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
-<footer></footer>
 </html>
